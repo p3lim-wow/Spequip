@@ -1,4 +1,8 @@
-local function OnEvent()
+﻿local Spequip = CreateFrame('Frame')
+Spequip:RegisterEvent('ACTIVE_TALENT_GROUP_CHANGED')
+Spequip:SetScript('OnEvent', function()
+	if(not GetNumTalentTabs()) then return end
+
 	local talentIndex
 	local mostPoints = -1
 	local mostPointsName
@@ -21,12 +25,4 @@ local function OnEvent()
 	end
 
 	print('|cffff8080Spequip:|r Unable to match equipment set to', mostPointsName, '(' .. talentString .. ')')
-end
-
-local Spequip = CreateFrame('Frame')
-Spequip:RegisterEvent('PLAYER_LOGIN')
-Spequip:SetScript('OnEvent', function(self, event)
-	self:UnregisterEvent(event)
-	self:RegisterEvent('ACTIVE_TALENT_GROUP_CHANGED')
-	self:SetScript('OnEvent', OnEvent)
 end)
