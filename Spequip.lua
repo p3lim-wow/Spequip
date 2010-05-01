@@ -1,8 +1,6 @@
 ﻿local Spequip = CreateFrame('Frame')
 Spequip:RegisterEvent('ACTIVE_TALENT_GROUP_CHANGED')
 Spequip:SetScript('OnEvent', function()
-	if(not GetNumTalentTabs()) then return end
-
 	local talentIndex
 	local mostPoints = -1
 	local mostPointsName
@@ -17,6 +15,7 @@ Spequip:SetScript('OnEvent', function()
 		end
 	end
 
+	if(not talentIndex) then return end
 	for index = 1, GetNumEquipmentSets() do
 		local name = GetEquipmentSetInfo(index)
 		if(name == talentIndex or name == mostPointsName) then
