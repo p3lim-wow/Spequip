@@ -23,5 +23,5 @@ Spequip:SetScript('OnEvent', function()
 		end
 	end
 
-	print('|cffff8080Spequip:|r Unable to match equipment set to', mostPointsName, '(' .. talentString .. ')')
+	print('|cffff8080Spequip:|r Unable to match equipment set to', mostPointsName, '(' .. talentIndex .. ')')
 end)
