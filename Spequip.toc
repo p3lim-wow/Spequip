@@ -4,4 +4,8 @@
 ## Title: Spequip
 ## Notes: Dual-spec equipment swapper
 
+## LoadManagers: AddonLoader
+## X-LoadOn-Events: ACTIVE_TALENT_GROUP_CHANGED
+## X-LoadOn-ACTIVE_TALENT_GROUP_CHANGED: AddonLoader:LoadAddOn('Spequip')
+
 Spequip.lua
