@@ -6,7 +6,7 @@ Spequip:SetScript('OnEvent', function()
 	local mostPointsName
 
 	for index = 1, GetNumTalentTabs() do
-		local name, _, points = GetTalentTabInfo(index)
+		local _, name, _, _, points = GetTalentTabInfo(index)
 		talentIndex = (talentIndex and talentIndex .. '/' or '') .. points
 
 		if(points > mostPoints) then
