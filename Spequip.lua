@@ -25,7 +25,3 @@ Spequip:SetScript('OnEvent', function()
 
 	print('|cffff8080Spequip:|r Unable to match equipment set to', mostPointsName, '(' .. talentIndex .. ')')
 end)
-
-if(IsAddOnLoaded('AddonLoader')) then
-	Spequip:GetScript('OnEvent')()
-end
